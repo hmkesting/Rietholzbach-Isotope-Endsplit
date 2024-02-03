@@ -9,8 +9,8 @@ from textwrap import wrap
 
 
 # Import data
-data = pd.read_csv(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\RHB.csv')
-daily_data = pd.read_csv(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\RHBDaily.csv')
+data = pd.read_csv(r'C:\Users\User\Documents\locationofisotopedata.csv')
+daily_data = pd.read_csv(r'C:\Users\User\Documents\UNR\locationofdailyfluxdata.csv')
 
 # Extract key columns
 sampling_dates = data.loc[:, 'date']
