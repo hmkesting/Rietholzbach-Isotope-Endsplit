@@ -332,7 +332,6 @@ def plot_panels_q(iso_data, fluxes, pwt, qwt, X_axis, title):
     fig.tight_layout()
     plt.subplots_adjust(bottom=0.1)
     axs[4, 2].legend(ncol=2, bbox_to_anchor=(0.9, -0.25), fontsize=16)
-    fig.savefig(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\figures\Qpartitioning' + title + '_final.svg', dpi=500)
     plt.show()
 
     return df, summer_results, winter_results
@@ -426,8 +425,6 @@ def plot_panels_et(years, iso_data, fluxes, pwt, qwt, et_df, X_axis, title):
     fig.tight_layout()
     plt.subplots_adjust(bottom=0.14)
     axs[4, 1].legend(ncol=1, bbox_to_anchor=(0.7, -0.25), fontsize=16)
-    fig.savefig(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\figures\ETpartitioning' + title + '_final.svg', dpi=500)
-
     plt.show()
 
     return df, summer_results, winter_results
