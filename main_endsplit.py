@@ -80,7 +80,6 @@ axs[1, 1].set_xlabel('Winter Precipitaton (mm)', fontsize=14)
 ols_slope_int(winter_precip_upp, temp_feb_apr, plot=axs[1, 1])
 
 plt.tight_layout()
-fig.savefig(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\figures\fractionsnow_final.svg', dpi=500)
 plt.show()
 
 
@@ -108,7 +107,6 @@ diagram_in_out(axs[0], lt_table_all, longterm_all, 'All RHB', Pw_ET_amt=80)
 diagram_in_out(axs[1], lt_table_upp, longterm_upp, 'Upper RHB', Pw_ET_amt=20)
 diagram_in_out(axs[2], lt_table_lys, longterm_lys, 'Lysimeter', Pw_ET_amt=20)
 fig.tight_layout()
-fig.savefig(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\figures\LongtermSplitDiagrams_final.svg', dpi=500)
 plt.show()
 
 precip_df = sum_precip_totals(date_daily, precip_mm)
@@ -135,7 +133,6 @@ df, table = multi_year_endsplit(iso_data_upp, fluxes_upp, pwt_upp, qwt_upp, year
 diagram_in_out(axs[1, 1], table, df, 'Drier Winters', Pw_ET_amt=85, Ps_Qs_amt=-30)
 
 fig.tight_layout()
-fig.savefig(r'C:\Users\User\Documents\UNR\Summer2023\Rietholzbach\UpperRHBSplitDiagrams_Oct_to_Sep.svg', dpi=500)
 plt.show()
 
 
@@ -160,7 +157,6 @@ df, table = multi_year_endsplit(iso_data_all, fluxes_all, pwt_all, qwt_all, year
 diagram_in_out(axs[1, 1], table, df, 'Drier Winters', Ps_ET_pct=50, Pw_ET_amt=85, Pw_ET_pct=120,
                Ps_Qs_amt=-30, Ps_Qs_pct=-20)
 fig.tight_layout()
-fig.savefig(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\figures\AllRHBSplitDiagrams_final.svg', dpi=500)
 plt.show()
 
 
@@ -186,7 +182,6 @@ df, table = multi_year_endsplit(iso_data_lys, fluxes_lys, pwt_lys, qwt_lys, year
 diagram_in_out(axs[1, 1], table, df, 'Drier Winters', Ps_ET_pct=50, Pw_ET_amt=85, Pw_ET_pct=120,
                Ps_Qs_amt=-30, Ps_Qs_pct=-20)
 fig.tight_layout()
-fig.savefig(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\figures\LysSplitDiagrams_final.svg', dpi=500)
 plt.show()
 
 
@@ -270,7 +265,6 @@ plt.xlabel('Year')
 plt.xticks(ticks=[1995, 2000, 2005, 2010])
 plt.ylabel('Evapotranspiration (mm)')
 plt.legend(labelspacing=0.1)
-plt.savefig(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\figures\AnnualETAmountsLines_final.svg', dpi=500)
 plt.show()
 
 
