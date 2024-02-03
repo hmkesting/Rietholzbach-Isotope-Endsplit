@@ -281,7 +281,6 @@ def plot_del_figure(q_all, stream_isotope, sampling_dates, date_daily, stream_is
     plt.xlabel('Month')
     plt.ylabel('δ$^{18}$O (‰)')
     plt.subplots_adjust(bottom=0.35)
-    plt.savefig(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\figures\Pdel_wide_final.svg', dpi=500)
     plt.show()
 
 
@@ -397,6 +396,5 @@ def plot_correlations(df, x_column, source):
     axs[4, 0].set_xlabel(x_label, fontsize=12)
     axs[4, 1].set_xlabel(x_label, fontsize=12)
     fig.tight_layout()
-    fig.savefig(r'C:\Users\User\Documents\UNR\Swiss Project\Coding\figures\cor' + source + x_label + '_final.svg', dpi=500)
     plt.show()
 
