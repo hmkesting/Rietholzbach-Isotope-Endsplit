@@ -232,8 +232,8 @@ def plot_del_figure(q_all, stream_isotope, sampling_dates, date_daily, stream_is
         calc_precip(sampling_dates, precip_mm, precip_isotope, interval, start_summer, start_winter)
     wtd_mean_stream = [wtd_mean_stream_all, wtd_mean_stream_upper, wtd_mean_stream_lys]
 
-    stream_label = ['All RHB', 'Lysimeter', 'Upper RHB']
-    colors = ["blue", "orange", "green"]
+    stream_label = ['All RHB', 'Upper RHB', 'Lysimeter']
+    colors = ["blue", "green", "orange"]
     style = ["solid", "dashed", "dashed"]
     date_all = concatenate(iso_data_all, range(len(iso_data_all)), label='Qdel_dates')
     qdel_all = concatenate(iso_data_all, range(len(iso_data_all)), label='Qdel')
@@ -255,9 +255,9 @@ def plot_del_figure(q_all, stream_isotope, sampling_dates, date_daily, stream_is
     letters_list = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
     plt.figure(figsize=(7, 4))
-    plt.scatter(qdate_all, qdel_all, qwts_all, color='green', marker='.', label='All RHB')
+    plt.scatter(qdate_all, qdel_all, qwts_all, color='blue', marker='.', label='All RHB')
+    plt.scatter(qdate_upp, qdel_upp, qwts_upp, color='green', marker='.', label='Upper RHB')
     plt.scatter(qdate_lys, qdel_lys, qwts_lys, color='orange', marker='.', label='Lysimeter')
-    plt.scatter(qdate_upp, qdel_upp, qwts_upp, color='blue', marker='.', label='Upper RHB')
     for i in range(3):
         plt.plot((0, 11), (wtd_mean_stream[i], wtd_mean_stream[i]), color=colors[i], linewidth=2, linestyle=style[i],
                  label=stream_label[i])
